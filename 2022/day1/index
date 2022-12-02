@@ -1,0 +1,25 @@
+const { clear } = require('console');
+const fs = require('fs') 
+  
+const raw = fs.readFileSync('input.txt').toString();
+let arr = raw.split('\n').map(n => Number(n))
+
+let z=0
+let w=0
+let q=[]
+for (let x of arr) {
+ z=z+x
+ if (x===0) {
+     q.push(z)
+     if (z>w) {
+     w=z
+     }  
+    z=0
+ }
+}
+q.sort(function(a, b) {
+    return a - b;
+  });
+k = q.reverse().slice(0,10)
+j= 71934+69849+69664
+console.log(j)

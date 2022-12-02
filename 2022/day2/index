@@ -1,0 +1,94 @@
+const fs = require('fs') 
+  
+const raw = fs.readFileSync('input2.txt').toString();
+let arr = raw.split('\n')
+let tot1=0
+
+//Part 1
+
+const partOne = (data) => {
+
+    let totalPartOne=0
+
+    for (let x of arr) {
+        if (x[0]==='A') {
+            if (x[2]==='X') {
+            totalPartOne+=4
+            }
+            if (x[2]==='Y') {
+            totalPartOne+=8
+            }
+            if (x[2]==='Z') {
+            totalPartOne+=3
+            }
+        }
+
+        if (x[0]==='B') {
+            if (x[2]==='X') {
+            totalPartOne+=1
+            }
+            if (x[2]==='Y') {
+            totalPartOne+=5
+            }
+            if (x[2]==='Z') {
+            totalPartOne+=9
+            }
+        }
+
+        if (x[0]==='C') {
+            if (x[2]==='X') {
+            totalPartOne+=7
+            }
+            if (x[2]==='Y') {
+            totalPartOne+=2
+            }
+            if (x[2]==='Z') {
+            totalPartOne+=6
+            }
+        }
+    }
+return totalPartOne
+}
+
+console.log(partOne(arr))
+
+// Part 2
+
+// for (let x of arr) {
+//   if (x[0]==='A') {
+//     if (x[2]==='X') {
+//     tot1+=3
+//     }
+//     if (x[2]==='Y') {
+//     tot1+=4
+//       }
+//     if (x[2]==='Z') {
+//     tot1+=8
+//       }
+//   }
+
+//   if (x[0]==='B') {
+//     if (x[2]==='X') {
+//     tot1+=1
+//     }
+//     if (x[2]==='Y') {
+//     tot1+=5
+//       }
+//     if (x[2]==='Z') {
+//     tot1+=9
+//       }
+//   }
+
+//   if (x[0]==='C') {
+//     if (x[2]==='X') {
+//     tot1+=2
+//     }
+//     if (x[2]==='Y') {
+//     tot1+=6
+//       }
+//     if (x[2]==='Z') {
+//     tot1+=7
+//       }
+//   }
+  
+
