@@ -22,7 +22,7 @@ const partOne = (arr) => {
     return total
 }
 
-// console.log('The solution to Part One is', partOne(arr))
+console.log('The solution to Part One is', partOne(arr))
 
 const partTwo = (arr) => {
     let total=0;
@@ -43,7 +43,7 @@ const partTwo = (arr) => {
         for (let z of tempArr) {
             tempEnd.includes(z) ? char=z.charCodeAt(0) : null
         }
-// console.log('char',char, 'tempArr', tempArr)
+
         char>96 ? char=char-96 : char=char-38
 
         total+=char
